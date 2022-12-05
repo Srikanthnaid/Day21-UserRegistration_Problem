@@ -7,7 +7,7 @@ public class UserRegistration {
 
 	public static void passwordCheck(String Password) {// taken a Parameter
 
-		// UC5 ->password Rule 1
+		// UC6 ->password Rule 2 password having at least one upper case letter
 		Pattern p = Pattern.compile("^[A-Za-z0-9@#$_-]{8,}$");
 		Matcher m = p.matcher(Password);
 
@@ -21,6 +21,6 @@ public class UserRegistration {
 
 	public static void main(String[] args) {
 		System.out.println("-----------Welcome to UserRegistration------------");
-		passwordCheck("Srikanth9640@");// call the method
+		passwordCheck("Srikanth4452#");// call the method
 	}
 }
