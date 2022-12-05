@@ -5,22 +5,22 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-	public static void mobileNumberCheck(String Mbnumber) {// taken a Parameter
+	public static void passwordCheck(String Password) {// taken a Parameter
 
-		// UC3 ->Valid E-mail
-		Pattern p = Pattern.compile("^[1-9]{2}\\s[6-9]{1}[0-9]{9}$");
-		Matcher m = p.matcher(Mbnumber);
+		// UC5 ->password Rule 1
+		Pattern p = Pattern.compile("^[A-Za-z0-9@#$_-]{8,}$");
+		Matcher m = p.matcher(Password);
 
 		if (m.matches()) {// true
-			System.out.println("\n\tMobile number Valid");
+			System.out.println("\n\t Password Valid");
 		} else { // false
-			System.out.println("! Not-Valid mobile number  \nPlease Enter proper one");
+			System.out.println("! Not-Valid Password  \nPlease Enter proper one");
 		}
 
 	}
 
 	public static void main(String[] args) {
 		System.out.println("-----------Welcome to UserRegistration------------");
-		mobileNumberCheck("91 9640604452");// call the method
+		passwordCheck("Srikanth9640@");// call the method
 	}
 }
