@@ -5,14 +5,14 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-	public static void passwordCheck(String Password) {// taken a Parameter
+	public static void validEmailCheck(String emails) {// taken a Parameter
 
-		// UC8 ->password Rule 3 password having at least one special character
-		Pattern p = Pattern.compile("^[A-Za-z0-9@#$_!&^-]{8,}$");
-		Matcher m = p.matcher(Password);
+		// UC9 - >Valid E-Mails
+		Pattern p = Pattern.compile("^[a-zA-Z0-9]+[@][a-zA-Z]+[.][a-z]{2,3}$");
+		Matcher m = p.matcher(emails);
 
 		if (m.matches()) {// true
-			System.out.println("\n\t Password Valid");
+			System.out.println("\n\t Email Valid");
 		} else { // false
 			System.out.println("! Not-Valid Password  \nPlease Enter proper one");
 		}
@@ -21,6 +21,6 @@ public class UserRegistration {
 
 	public static void main(String[] args) {
 		System.out.println("-----------Welcome to UserRegistration------------");
-		passwordCheck("Srikanth4452#");// call the method
+		validEmailCheck("srikanth019@gmail.com");// call the method
 	}
 }
