@@ -16,7 +16,7 @@ class UserRegistrationTest {
 
 	@Test
 	public void givenFirstName_WhenInValid_ShouldReturnsFalse() {
-		boolean result = userRegistration.firstNameCheck("surabhi");
+		boolean result = userRegistration.firstNameCheck("srikanth");
 		assertFalse(result);
 	}
 
